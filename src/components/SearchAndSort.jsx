@@ -1,0 +1,37 @@
+import React from 'react';
+import '../categories/style.css';
+
+const SearchAndSort = ({ searchTerm, setSearchTerm, sortKey, setSortKey, placeholder = "Search..." }) => {
+    return (
+        <div className="searchAndSort" id='searchAndSort'>
+            {/* SEARCH */}
+            <div id="search">
+                <input 
+                    type="text" 
+                    id='searchBar' 
+                    placeholder={placeholder} 
+                    maxLength={20} 
+                    value={searchTerm} 
+                    onChange={e => setSearchTerm(e.target.value)} 
+                />
+                <span id="icon">
+                    <svg height="20" width="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.195 0c4.527 0 8.196 3.62 8.196 8.084a7.989 7.989 0 0 1-1.977 5.267l5.388 5.473a.686.686 0 0 1-.015.98a.71.71 0 0 1-.993-.014l-5.383-5.47a8.23 8.23 0 0 1-5.216 1.849C3.67 16.169 0 12.549 0 8.084C0 3.62 3.67 0 8.195 0Zm0 1.386c-3.75 0-6.79 2.999-6.79 6.698c0 3.7 3.04 6.699 6.79 6.699s6.791-3 6.791-6.699c0-3.7-3.04-6.698-6.79-6.698Z" fill="#6c6c6cff" />
+                    </svg>
+                </span>
+            </div>
+
+            {/* SORT */}
+            <div id="sort">
+                <select id="sortBy" value={sortKey} onChange={e => setSortKey(e.target.value)} style={{outline: 'none', cursor: 'pointer'}}>
+                    <option value="newArrivals">New Arrivals</option>
+                    <option value="aToZ">A → Z</option>
+                    <option value="zToA">Z → A</option>
+                </select>
+            </div>
+        </div>
+    );
+};
+
+export default SearchAndSort;
+

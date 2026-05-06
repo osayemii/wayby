@@ -1,0 +1,328 @@
+:root {
+  --admin-primary: #8B7355;
+  --admin-primary-dark: #6d5a42;
+  --admin-bg: #f4f7f6;
+  --admin-card-bg: #ffffff;
+  --admin-text: #2d3436;
+  --admin-text-light: #636e72;
+  --admin-accent: #3498db;
+  --admin-danger: #e74c3c;
+  --admin-success: #2ecc71;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.manage-container {
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.manage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  background: white;
+  padding: 20px 30px;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+.manage-header h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--admin-text);
+  margin: 0;
+}
+
+.btn-add {
+  padding: 12px 24px;
+  background: var(--admin-primary);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(139, 115, 85, 0.3);
+}
+
+.btn-add:hover {
+  transform: translateY(-2px);
+  background: var(--admin-primary-dark);
+}
+
+/* Premium Form Styling */
+.manage-form {
+  background: white;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  margin-bottom: 50px;
+  border: 1px solid rgba(0,0,0,0.02);
+}
+
+.manage-form h3 {
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+  color: var(--admin-text);
+  border-left: 5px solid var(--admin-primary);
+  padding-left: 15px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--admin-text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.manage-form input, 
+.manage-form textarea, 
+.manage-form select {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #f0f0f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #fafafa;
+}
+
+.manage-form input:focus, 
+.manage-form textarea:focus, 
+.manage-form select:focus {
+  outline: none;
+  border-color: var(--admin-primary);
+  background: white;
+  box-shadow: 0 0 0 4px rgba(139, 115, 85, 0.05);
+}
+
+.manage-form textarea {
+  grid-column: span 2;
+  min-height: 120px;
+  resize: vertical;
+}
+
+.btn-save {
+  margin-top: 30px;
+  padding: 16px 40px;
+  background: var(--admin-success);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.btn-save:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+/* Premium Card Grid */
+.items-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 25px;
+}
+
+.item-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.02);
+  display: flex;
+  flex-direction: column;
+}
+
+.item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.item-image-wrapper {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.item-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(255,255,255,0.9);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--admin-primary);
+}
+
+.item-content {
+  padding: 20px;
+  flex: 1;
+}
+
+.item-content h4 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: var(--admin-text);
+}
+
+.item-content p {
+  font-size: 0.9rem;
+  color: var(--admin-text-light);
+  line-height: 1.5;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.item-footer {
+  padding: 20px;
+  background: #fafafa;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.btn-edit, .btn-delete {
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+}
+
+.btn-edit { background: #e3f2fd; color: #1976d2; }
+.btn-delete { background: #ffebee; color: #c62828; }
+
+.btn-edit:hover { background: #1976d2; color: white; }
+.btn-delete:hover { background: #c62828; color: white; }
+
+/* Custom Category Toggle */
+.category-toggle {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.toggle-btn {
+  padding: 8px 20px;
+  border-radius: 30px;
+  background: white;
+  border: 2px solid #f0f0f0;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--admin-text-light);
+  transition: all 0.3s;
+}
+
+.toggle-btn.active {
+  background: var(--admin-primary);
+  border-color: var(--admin-primary);
+  color: white;
+  box-shadow: 0 4px 10px rgba(139, 115, 85, 0.2);
+}
+
+/* RESPONSIVE STYLES FOR ADMIN MANAGEMENT */
+@media (max-width: 768px) {
+  .manage-container {
+    padding: 15px;
+  }
+
+  .manage-header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .category-toggle {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    -webkit-overflow-scrolling: touch;
+    gap: 10px;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+
+  .toggle-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .manage-form {
+    padding: 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr !important;
+    gap: 15px;
+  }
+
+  .manage-form textarea {
+    grid-column: span 1;
+  }
+
+  .gallery-builder {
+    padding: 15px;
+  }
+
+  .gallery-builder > div:first-of-type {
+    grid-template-columns: 1fr !important; 
+    display: flex !important;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .btn-save {
+    padding: 14px;
+    font-size: 1.1rem;
+    width: 100%;
+  }
+
+  /* Stack the bottom action buttons in AdminManageServices */
+  .manage-form > div[style*="display: flex"] {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  .btn-delete {
+    width: 100% !important;
+    padding: 14px !important;
+  }
+
+  .items-list {
+    grid-template-columns: 1fr;
+  }
+}

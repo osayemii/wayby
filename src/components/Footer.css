@@ -1,0 +1,147 @@
+.footer {
+  background-color: #2C2C2C;
+  color: white;
+  padding: 48px 0 24px;
+  min-height: calc(100vh - 60px);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 32px;
+  align-items: flex-start;
+  flex: 1;
+  /* z-index: 100; */
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: calc(100vh - 120px);
+  /* border: 1px solid red; */
+}
+
+.footer-section img {
+  width: 100px;
+  margin-bottom: 16px;
+}
+
+.footer-section h4 {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.footer-section p {
+  color: #CCCCCC;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  color: #CCCCCC;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #8B7355;
+}
+
+.social-links {
+  display: flex;
+  gap: 16px;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(139, 115, 85, 0.2);
+  border-radius: 50%;
+  color: #8B7355;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background-color: #8B7355;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.footer-bottom {
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+  border-top: 1px solid #444;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.footer-bottom p {
+  color: #CCCCCC;
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-links a {
+  color: #CCCCCC;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #8B7355;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 32px 0 16px;
+    height: auto;
+  }
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-bottom: 120px;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+  .space{
+    display: none;
+  }
+}
+
+@media (max-width: 468px) {
+  .footer-bottom {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .space{
+    display: none;
+  }
+}
