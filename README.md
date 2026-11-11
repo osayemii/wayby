@@ -8,10 +8,10 @@
 
 ## Root folders
 
-| Folder | What it contains |
-| --- | --- |
-| `public/` | Static assets. |
-| `src/` | React/Vite source code. |
+| Folder | Stack | What it contains |
+| --- | --- | --- |
+| `public/` | Static assets | Static assets. |
+| `src/` | React, Vite, JavaScript | React/Vite source code. |
 
 Only root folders are listed. Generated caches, package folders, editor settings, and other non-personal folders are omitted.
 
